@@ -1,0 +1,14 @@
+name: Print Variable
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print variable
+        run: echo "MY_VAR is ${{ vars.MY_VAR }}"
